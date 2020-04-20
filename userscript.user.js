@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         Depfu Freshness Score
 // @namespace    https://source.xing.com/matt-izoulet/
-// @version      1.1
-// @description  Add freshness scores and icons
+// @description  Add freshness scores and icons in Depfu
 // @author       Matthieu Izoulet
 // @match        https://depfu.dc.xing.com/*
+// @version      1.1
 // ==/UserScript==
 
 ;(function () {

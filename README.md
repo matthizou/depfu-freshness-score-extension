@@ -1,5 +1,10 @@
 # Depfu Freshness Scores and Icons
 
+If you are using Depfu to manage and update your repos' external dependencies, the script/extension will help you spot immediately which need your attention.
+
+> Some of my dependencies are litteraly on fire !  
+> _A first time user_
+
 Using the data from the depfu dashboard, this script calculates and displays how "fresh" is the version of each dependency compared to the latest version available on Github.
 
 The lowest the freshness score is, the better.

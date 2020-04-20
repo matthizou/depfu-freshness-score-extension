@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Depfu Freshness Options</title>
+    <style>
+      #error {
+        color: red;
+      }
+      input {
+        width: 250px;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Please enter the Url on which you want this extension to apply
+    </p>
+    <p><i>Example: https://depfu-my-company.com/</i></p>
+    <label for="custom_url">Url: </label>
+    <input id="custom_url" />
+    <div style="margin: 5px 0;">
+      <div id="status"></div>
+      <div id="error"></div>
+    </div>
+    <button id="save">Save</button>
+    <script src="options.js"></script>
+  </body>
+</html>
