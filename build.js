@@ -1,21 +1,23 @@
 const path = require('path')
 const fs = require('fs')
+const spawn = require('child_process').spawn
 
 console.log('Building userscript...')
 
 const cwd = process.cwd()
-const outputPath = path.resolve('./userscript.user.js')
-const manifestPath = './manifest.json'
-const userscriptPath = './userscript.user.js'
+const manifestPath = './extension/manifest.json'
+const userscriptPath = './userscript/userscript.user.js'
 
 try {
   const manifest = require(manifestPath)
-  const currentVersion = parseFloat(manifest.version)
-  if (isNaN(currentVersion)) {
-    throw `Invalid Version number in manifest: ${currentVersion}`
-  }
+  const [major, minor, patch] = manifest.version.split('.').map(parseFloat)
 
-  const newVersion = (currentVersion + 0.1).toFixed(1)
+  if (isNaN(major) || isNaN(minor) || isNaN(patch)) {
+    console.log(major, minor, patch)
+
+    throw `Invalid Version number in manifest: ${manifest.version}`
+  }
+  const newVersion = `${major}.${minor}.${patch + 1}`
   console.log('New Version:', newVersion)
 
   // Update manifest
@@ -25,13 +27,15 @@ try {
 
   // Generate userscript
   fs.writeFileSync(userscriptPath, generateUserscript(newVersion))
+
+  createExtensionArchive(newVersion)
 } catch (err) {
   console.error(`  Details: ${err}`)
 }
 
 function generateUserscript(newVersion) {
-  const logic = fs.readFileSync('./content.js')
-  const header = fs.readFileSync('./userscript-header.txt')
+  const logic = fs.readFileSync('./extension/content.js')
+  const header = fs.readFileSync('./userscript/userscript-header.txt')
   return [
     '// ==UserScript==',
     header,
@@ -40,4 +44,17 @@ function generateUserscript(newVersion) {
     '',
     logic,
   ].join('\n')
+}
+
+function createExtensionArchive(newVersion) {
+  const child_process = require('child_process')
+  child_process.execSync(`rm -f build/extension*`, {
+    cwd,
+  })
+  child_process.execSync(
+    `zip -r build/extension_${newVersion}.zip extension/ -x extension/images/screenshots/*`,
+    {
+      cwd,
+    },
+  )
 }

@@ -4,7 +4,7 @@
 // @description  Add freshness scores and icons in Depfu
 // @author       Matthieu Izoulet
 // @match        https://depfu.dc.xing.com/*
-// @version      1.1
+// @version      1.3.4
 // ==/UserScript==
 
 ;(function () {

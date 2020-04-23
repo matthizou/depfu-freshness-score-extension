@@ -9,7 +9,7 @@ Using the data from the depfu dashboard, this script calculates and displays how
 
 The lowest the freshness score is, the better.
 
-<img src="images/screenshot-1.png" width="800">
+<img src="extension/images/screenshots/overview-2.png" width="600">
 
 The maths are simple. Let's take an example:
 
@@ -35,28 +35,54 @@ _Time to upgrade urgently this dependency !_
 
 ---
 
-## Getting Started
+# Getting Started
 
-### What is a userscript ?
+This script is available as an Chrome extension or as a userscript.
 
-**Userscripts** are little scripts injected in web pages to improve them. See them as addons, or extensions, (usually) scoped to pages or sites.  
-Adding features/information, changing UI, hiding undesired ads, are typical examples of what they usually do.
+## Chrome extension
+
+1. Download the extension from the Chrome Web Store:  
+   https://chrome.google.com/webstore/search/depfu%20freshness?authuser=0&hl=en-GB
+
+2. Go in the Options page for the extension.  
+   The easiest way to get there is to right click on the extension icon, when it appears.
+
+   <img src="extension/images/screenshots/extension-setup-1.png"/>
+
+3. Add your Depfu domain in the input box and follow the instructions
+   <img src="extension/images/screenshots/options_2.png"/>
+
+   <img src="extension/images/screenshots/extension-setup-2.png"/>
+
+4. Refresh your Defu page and the icon should appear in color
+
+   <img src="extension/images/screenshots/extension-setup-3.png"/>
+
+---
+
+## Userscript
+
+**Userscripts** work exactly like browser extensions - but they give developers more freedom to tweak and play with the source code. They don't have custom icons, or access to some native browsers methods, but are less hassle to develop.
+
+Functionally, the Depfu-Freshness-Score extension and userscript are doing the same.
 
 ### Prerequisite
 
-The application is has been tested/styled on the latest version of Chrome.  
-It should also work with Firefox.
+The application is has been tested/styled on the latest version of Chrome and **Firefox**.
 
-In order for your browser to run userscripts, you need to install a userscript manager extension. I recommand **Tampermonkey**  
-Install the [Tampermonkey extension](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
+In order for your browser to run userscripts, you need to install a userscript manager extension. I recommand **Tampermonkey**
 
-### Installation
+1. Install the [Tampermonkey extension](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
 
-Go to this url: [https://github.com/matthizou/depfu-freshness-score-extension/raw/master/depfu-freshness-score.user.js](https://github.com/matthizou/depfu-freshness-score-extension/raw/master/depfu-freshness-score.user.js)  
-Tampermonkey will pick up the fact that you are displaying a raw userscript and will ask you if you want to install the script.  
-Click the **install** button.
+2. Install the Depfu-Freshness-Score script in tampermonkey
 
-<img src="images/userscript-installation.png" width="600">
+   Go to this url: [https://github.com/matthizou/depfu-freshness-score-extension/raw/master/depfu-freshness-score.user.js](https://github.com/matthizou/depfu-freshness-score-extension/raw/master/userscript/userscript.user.js)
+
+   Tampermonkey will pick up the fact that you are displaying a raw userscript and will ask you if you want to install the script.
+
+   Click the **install** button.
+
+   <img src="extension/images/screenshots/userscript-installation.png" width="600">
 
 ## Authors
 

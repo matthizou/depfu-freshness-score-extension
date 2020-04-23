@@ -24,12 +24,8 @@ function save() {
       custom_url: customUrl,
     },
     function () {
-      const status = document.getElementById('status')
-      status.textContent = 'Options saved.'
-      document.getElementById('error').textContent = ''
-      setTimeout(function () {
-        status.textContent = ''
-      }, 750)
+      document.getElementById('form').style.display = 'none'
+      document.getElementById('success').style.display = 'block'
     },
   )
 }

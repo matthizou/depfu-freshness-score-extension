@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Depfu Freshness Options</title>
+    <style>
+      #error {
+        color: red;
+      }
+      input {
+        width: 250px;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="form">
+      <p>
+        Please enter the Url on which you want this extension to apply
+      </p>
+      <p><i>Example: https://depfu-my-company.com/</i></p>
+      <p>
+        All authorized pages can be seen in the Site Access section of the
+        option page behind this popup
+      </p>
+      <label for="custom_url">Url: </label>
+      <input id="custom_url" />
+      <div style="margin: 5px 0;">
+        <div id="status"></div>
+        <div id="error"></div>
+      </div>
+      <button id="save">Save</button>
+    </div>
+    <div id="success" style="display: none;">
+      <h2>Url successfully saved !</h2>
+      <p>
+        Your browser should now show you a confirmation for this url.
+        <br />Click "Allow" and you will be done.
+      </p>
+      <p>
+        All authorized pages can be seen in the Site Access section of the
+        option page behind this popup
+      </p>
+    </div>
+    <script src="options.js"></script>
+  </body>
+</html>

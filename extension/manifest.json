@@ -1,0 +1,38 @@
+{
+  "name": "Depfu Freshness Score",
+  "version": "1.3.4",
+  "description": "Adds a freshness score to each dependencies in Depfu",
+  "manifest_version": 2,
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "icons": {
+    "16": "images/depfu_score16.png",
+    "32": "images/depfu_score32.png",
+    "48": "images/depfu_score48.png",
+    "128": "images/depfu_score128.png"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "optional_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "images/depfu_score16.png",
+      "32": "images/depfu_score32.png",
+      "48": "images/depfu_score48.png",
+      "128": "images/depfu_score128.png"
+    },
+    "default_popup": "popup.html"
+  }
+}
