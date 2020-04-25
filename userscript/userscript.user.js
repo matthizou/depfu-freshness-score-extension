@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         Depfu Freshness Score
-// @namespace    https://source.xing.com/matt-izoulet/
+// @namespace    https://github.com/matthizou/depfu-freshness-score-extension
 // @description  Add freshness scores and icons in Depfu
 // @author       Matthieu Izoulet
-// @match        https://depfu.dc.xing.com/*
+// @include     /^https?:\/\/[^\/]*depfu[^\/]*\/.*/
 // @version      1.3.4
 // ==/UserScript==
 

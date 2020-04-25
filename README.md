@@ -9,7 +9,9 @@ Using the data from the depfu dashboard, this script calculates and displays how
 
 The lowest the freshness score is, the better.
 
-<img src="extension/images/screenshots/overview-2.png" width="600">
+<img src="extension/images/screenshots/overview.png"/>
+
+<img src="extension/images/screenshots/overview-3.png" width="400">
 
 The maths are simple. Let's take an example:
 
@@ -47,9 +49,9 @@ This script is available as an Chrome extension or as a userscript.
 2. Go in the Options page for the extension.  
    The easiest way to get there is to right click on the extension icon, when it appears.
 
-   <img src="extension/images/screenshots/extension-setup-1.png"/>
+   https://github.com/matthizou/github-comment-badges#github-enterprise
 
-3. Add your Depfu domain in the input box and follow the instructions
+3. Add your Depfu domain in the input box and follow the instructions  
    <img src="extension/images/screenshots/options_2.png"/>
 
    <img src="extension/images/screenshots/extension-setup-2.png"/>
@@ -70,13 +72,13 @@ Functionally, the Depfu-Freshness-Score extension and userscript are doing the s
 
 The application is has been tested/styled on the latest version of Chrome and **Firefox**.
 
-In order for your browser to run userscripts, you need to install a userscript manager extension. I recommand **Tampermonkey**
+In order for your browser to run userscripts, you need to install a userscript manager extension. I recommend **Tampermonkey**
 
 1. Install the [Tampermonkey extension](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
 
 2. Install the Depfu-Freshness-Score script in tampermonkey
 
-   Go to this url: [https://github.com/matthizou/depfu-freshness-score-extension/raw/master/depfu-freshness-score.user.js](https://github.com/matthizou/depfu-freshness-score-extension/raw/master/userscript/userscript.user.js)
+   Go to this [url](https://github.com/matthizou/depfu-freshness-score-extension/raw/master/userscript/userscript.user.js)
 
    Tampermonkey will pick up the fact that you are displaying a raw userscript and will ask you if you want to install the script.
 
@@ -84,6 +86,14 @@ In order for your browser to run userscripts, you need to install a userscript m
 
    <img src="extension/images/screenshots/userscript-installation.png" width="600">
 
-## Authors
+3. The script will be activated if the word "depfu" appears in the page's domain  
+   _i.e: https://**depfu**.my-company.co.uk/_  
+   If it doesn't work for your locally hosted depfu, you'll need to edit the script and manually add your Depfu's domain. Read [this](https://github.com/matthizou/github-comment-badges#github-enterprise) for more details. Feel free to contact me for help.
+
+## Acknowledgments
+
+Thanks to [New Work](https://www.new-work.se/en/) for encouraging creativity and encouraging the development of this script. Hackweeks are awesome!
+
+## Author
 
 - **Matthieu Izoulet**

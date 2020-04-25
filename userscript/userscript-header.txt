@@ -2,4 +2,4 @@
 // @namespace    https://source.xing.com/matt-izoulet/
 // @description  Add freshness scores and icons in Depfu
 // @author       Matthieu Izoulet
-// @match        https://depfu.dc.xing.com/*
+// @include     /^https?:\/\/[^\/]*depfu[^\/]*\/.*/
