@@ -84,7 +84,7 @@ td.status {  position: relative; }
       patchGap = Math.min(patch2 * GAP_VALUE, MINOR_VALUE - 1)
       return minorGap + patchGap
     } else {
-      return (patch2 - patch1) * GAP_VALUE
+      return Math.min((patch2 - patch1) * GAP_VALUE, MINOR_VALUE - 1)
     }
   }
 
